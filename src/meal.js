@@ -11,7 +11,13 @@ function createMenuItem(itemName, itemPrice, itemType) {
   return menuItem;
 }
 function addIngredients(ingredient, arr) {
-  if (arr.indexOf(ingredient) === -1){
+  var isNewIngredient = true;
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] === ingredient) {
+      isNewIngredient = false;
+    }
+  }
+  if (isNewIngredient === true) {
     arr = arr.push(ingredient);
   }
 
