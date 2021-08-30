@@ -13,7 +13,7 @@ function createRestaurant(restaurantName) {
 
 function addMenuItem(restaurant, menuItem) {
   var restaurantMenuType = restaurant.menus[menuItem.type];
-  var isNotOnMenu = true;
+
   if (! restaurantMenuType.includes(menuItem)) {
     restaurantMenuType.push(menuItem);
   }

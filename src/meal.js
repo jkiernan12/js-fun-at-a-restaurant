@@ -2,6 +2,7 @@ function nameMenuItem(name) {
   var result = "Delicious " + name;
   return result;
 }
+
 function createMenuItem(itemName, itemPrice, itemType) {
   menuItem = {
     name: itemName,
@@ -10,6 +11,7 @@ function createMenuItem(itemName, itemPrice, itemType) {
   }
   return menuItem;
 }
+
 function addIngredients(ingredient, arr) {
   if (! arr.includes(ingredient)) {
     arr.push(ingredient)
@@ -32,13 +34,15 @@ function createRecipe(title, ingredients, menuItemType) {
     ingredients: ingredients,
     type: menuItemType
   }
+
   return recipeObject;
 }
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-   formatPrice,
+  formatPrice,
   decreasePrice,
   createRecipe
 }

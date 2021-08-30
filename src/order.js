@@ -17,6 +17,7 @@ function refundOrder(orderNumber, deliveryOrders) {
 
 function listItems(deliveryOrders) {
   var orderNames = "";
+
   for (var i = 0; i < deliveryOrders.length; i++) {
     if (i !== (deliveryOrders.length - 1)) {
     orderNames = orderNames + deliveryOrders[i].item + ", ";
@@ -24,18 +25,18 @@ function listItems(deliveryOrders) {
     orderNames = orderNames + deliveryOrders[i].item;
   }
 }
+
   return orderNames;
 }
 
 function searchOrder(deliveryOrders, item) {
-  var isItemPresent = false;
   for (var i = 0; i < deliveryOrders.length; i++) {
     if (deliveryOrders[i].item === item) {
-      isItemPresent = true;
-      break;
+      return true;
     }
   }
-  return isItemPresent;
+  
+  return false;
 }
 
 module.exports = {
